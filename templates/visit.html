@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% include "navbar.html" %}
+<!-- {% load static %}  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visit</title>
+</head>
+<style>
+    body{
+       background-color:salmon;
+       text-align: center;
+    }
+ 
+ </style>
+<body>
+    <!-- Destinations -->
+
+		<div class="destinations" id="destinations">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle">simply amazing places</div>
+						<div class="section_title">
+							<h2>visit your favorite destination</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row destinations_row">
+					<div class="col">
+						<div class="destinations_container item_grid">
+
+							{% for dest in dest %}
+							<!-- Destination -->
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{{dest.image.url}}" alt="images" width="800" height="400">
+
+									{% if dest.offer %}
+									<div class="spec_offer text-center"><h2>Special Offer%%</h2></div>
+									{% endif %}
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{dest.description}}</p>
+									</div>
+									<div class="destination_price">From ${{dest.price}}</div>
+								</div>
+							</div>
+                            <br><br>
+							{% endfor %}
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

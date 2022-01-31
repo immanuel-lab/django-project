@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+{% include "navbar.html" %}
+{% load static %} 
+
+<html lang="en">
+<head>
+  
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>THE LAST TRUMPET</title>
+</head>
+<style>
+   body{
+      background-color: crimson;
+      text-align: center;
+   }
+h4{
+   font-style:italic;
+}
+p{
+   text-align: center;
+   
+}
+h5{
+  text-decoration-color: violet;
+}
+</style>
+
+<body >
+   <script>
+      
+
+var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 3000;	// Time Between Switch
+	 
+// Image List
+images[0] =  "{% static 'images/golden dome.jpeg'%}";
+images[1] =  "{% static 'images/trumpet.jpg'%}";
+images[2] =  "{% static 'images/jerusalem-travel.jpg'%}";
+images[3] =  "{% static 'images/schofar.jpg'%}";
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+   </script>
+   <h1> THE LAST TRUMPET</h1><hr><hr>
+   <h3>MARANTHA JESUS IS COMING</h3>
+ 
+    <img name ="slide" width="800" height="400">
+  
+<br><br><br>
+   <h4>For yet a little while, and he that shall come will come, and will not tarry.</h4>
+<h4>hebrews 10:37</h4>
+<br><br><br>
+<p><i>
+   The Second Coming (sometimes called the Second Advent or the Parousia) is a
+    Christian and Islamic belief that Jesus will return again, after his ascension
+     to heaven 
+    about two thousand years ago. The idea is based on messianic prophecies and is part of most Christian eschatologies.
+   <br>
+   Second Coming, also called Second Advent or Parousia, in Christianity, the future 
+   return of Christ in glory, when it is understood that he will set up his 
+   kingdom, judge his enemies, and reward the faithful, living and dead. 
+   Early Christians believed the Advent to be imminent (see millennium), and most
+    Christian theologians since then have believed that the visible appearance of 
+    Jesus may occur at any moment and that Christians should be ever ready for it. 
+    Such believers find evidence for the Second Coming in the Gospels (Matthew 24–25; Mark 13; Luke 21:5–26; John 14:25–29), in the Book of Revelation,
+     and in other biblical and traditional sources. See also Last Judgment.
+  <br><br>
+  We believe in the second coming of Christ. His return from heaven will be personal, visible and glorious, a blessed hope for which we should constantly watch and pray.1
+
+Before He establishes His kingdom on earth, Jesus will come for His Church, an event commonly referred to as the "Rapture." At that time the dead in Christ will be raised and living Christians will be caught up to meet the Lord in the air and be with Him forever.2 In this resurrection, those who have died in Christ will have their redeemed souls and spirits united with a body similar to Christ's glorified body. Christians living at the time of this event will not die, but will be changed to be like Christ.3 This expectation is a motivation for holy living, as well as a source of comfort.4 No man knows the day or the hour when this will take place.5
+
+After the Rapture of the Church, Christians will be brought before the judgment seat of Christ. He will reward them on the basis of the works they have accomplished.6 This is not a judgment to determine their salvation but a reward for labor on Christ's behalf.7 The Rapture will also inaugurate a period that the Bible characterizes as the "great day of His wrath," "the great tribulation" and the "time of Jacob's trouble."8 This time of unprecedented difficulty will affect Israel and all nations. Its purpose will be to prepare Israel for her Messiah.9
+
+At the end of the Tribulation, Jesus Christ will return with the hosts of heaven as well as the Church to establish the Messianic Kingdom on earth.10 His Kingdom will last for a thousand years.11 At this Second Coming, the Antichrist will be cast into the Lake of Fire and Satan will be bound for a thousand years. 12 The nations and their representatives will be judged.13 Israel will be restored to her land, never more to be removed.14 Christ will reign with firmness and equity.15 His kingdom will be marked by material and spiritual blessing, since the curse upon the earth will be removed.16
+
+The Messianic kingdom will close with apostasy and rebellion.17 God will crush this uprising in the last battle of the ages and Satan will be thrown into the lake of fire.18 All those who rejected the Word of God will be resurrected.19 They will be judged by Christ and cast into the lake of fire, the place where they will suffer final and everlasting punishment.20
+
+After this judgment there will be a new heaven and a new earth, where righteousness is the norm.21 There will be a new Jerusalem and the everlasting presence of God among all the redeemed.22
+
+1 Zechariah 14:4; Acts 1:11; Titus 2:13; Revelation 1:7
+
+2 1 Corinthians 15:51–54; 1 Thessalonians 4:14
+
+3 1 John 3:2
+
+4 1 John 2:28; 1 Thessalonians 4:18
+
+5 Matt. 24:36; John 6:39
+
+6 Romans 14:10–12; 2 Corinthians 5:10
+
+7 1 Corinthians 3:9–15
+
+8 Revelation 6:17; 7:14; Jeremiah 30:7
+
+9 Zechariah 12:2, 3; 14:1–3
+
+10 Revelation 19:7–9, 14; 1 Thessalonians 3:13; Zechariah 14:9; Revelation 19:15, 16
+
+11 Revelation 20:2, 4–6
+
+12 Revelation 19:20; 20:1–3
+
+13 Joel 3; Matthew 25
+
+14 Amos 9:15; Ezekiel 34:28
+
+15 Psalm 2:9; Isaiah 11:4
+
+16 Romans 8:19-21
+
+17 Revelation 20:7–9
+
+18 Revelation 20:10
+
+19 Revelation 20:11–13
+
+20 Revelation 20:14, 15; Mark 9:48
+
+21 2 Peter 3:13
+
+22 Revelation 21:2, 3; 2:3–5
+   
+   </i>
+</p><hr>
+<h3>if you would like to give us your details<a href="{% url 'form' %}"><br><u><h5>click here</h5></u> <a/></h3>
+</body>
+
+</html>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 

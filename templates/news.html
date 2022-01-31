@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% include "navbarauth.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+
+</head>
+<body>
+
+{% if user.is_authenticated %}
+    
+<h1> welcome {{user}}</h1>
+
+<br><br>
+{% for news in news %}
+<h2>News</h2>
+<h4>  {{news.date}}</h4>
+<br><br>
+ 
+<div class='image'>
+<img src="{{news.image.url}}" alt="images" >
+</div>  
+<div class='news'>
+   <p> {{news.news}} </p>
+    </div> 
+{% endfor %}
+{% endif %}  
+</body>
+</html>

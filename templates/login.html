@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% include "navbar.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/login.css'%}">
+
+
+    <title>log in</title>
+</head>
+
+
+<body >
+
+    <div style="margin: 50px;">
+        <form method='POST'>
+            {% csrf_token %}
+           
+           <div>{{ form|crispy}} </div>
+                 
+               <br>
+                
+        
+            
+            
+          <input type="submit" value="login">
+     
+        </form>
+       
+    </div>
+    <small>forgot password? <a  href="{% url 'password_reset' %}"><small style="text-decoration: underline;"> click here</small></a></small>
+    
+    <br><br>
+    <small>need an account <a  href="{% url 'register' %}"><small> sign up</small></a></small>
+<br>
+<br><br>
+<h5><a  href="{% url 'socialmedialog' %}">login with socialmedia</a></h5>
+</body>
+</html>
+
+<a href=""
